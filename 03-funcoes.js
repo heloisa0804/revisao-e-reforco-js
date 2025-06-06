@@ -52,3 +52,23 @@ let resultado2 = calculoDiferenca (30,10);
 
 console.log("Resultado 1:", resultado1); 
 console.log("Resultado 2:", resultado2); 
+
+separador();
+
+/* Sintaxe moderna, função flecha, seta (arrow function)
+Nesta sintaxe, a ordem de declaração IMPORTA. */
+const exemplo3 = () => {
+    console.log(" Arrow Function");
+
+}
+
+exemplo3(); // chamada deve ser feita após a declaração
+
+const saudacao = (nome) => {
+    console.log("Olá " +nome);
+};
+
+saudacao("João Pedro");
+saudacao("Alana");
+saudacao("Gabriel");
+
