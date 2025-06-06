@@ -10,3 +10,15 @@ function exemplo1(){
 }
 
 exemplo1(); //chamada da função
+
+//////////////////////
+
+console.log("****************");
+
+// Sintaxe tradicional, função anônima
+// Nesta sintaxe, a ordem IMPORTA.
+const exemplo2 = function(){
+     console.log("Função anônima");
+};
+
+exemplo2(); // chamada (sempre após declarar a função anônima)
