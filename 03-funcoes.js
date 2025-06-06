@@ -85,3 +85,14 @@ console.log(calcularMetadeSintaxeCompleta(10));
 const calcularMetade = valor => valor / 2;
 
 
+separador();
+
+/* Exercício de Refatoração */
+// 1) Reescreva a função do exercício anterior usando a sintaxe de arrow function.
+// 2) Teste fazendo novas chamadas e novas saídas
+
+
+const calculo1 = (a,b) => a + b;
+    
+console.log(calculo1(20,30));
+
