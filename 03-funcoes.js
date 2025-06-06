@@ -64,11 +64,24 @@ const exemplo3 = () => {
 
 exemplo3(); // chamada deve ser feita após a declaração
 
-const saudacao = (nome) => {
-    console.log("Olá " +nome);
-};
+// Quando a função tem SOMENTE UM parâmetro, podemos remover os parênteses. E quando ela faz SOMENTE UMA ÚNICA ação (ideal), podemos remover as chaves e deixar em uma linha.
+const saudacao = nome => console.log("Olá " +nome);
+;
 
 saudacao("João Pedro");
 saudacao("Alana");
 saudacao("Gabriel");
+
+separador();
+
+// Com retorno EXPLÍCITO
+const calcularMetadeSintaxeCompleta = (valor) => {
+    return valor / 2;
+}
+
+console.log(calcularMetadeSintaxeCompleta(10));
+
+// Com retorno IMPLÍCITO
+const calcularMetade = valor => valor / 2;
+
 
