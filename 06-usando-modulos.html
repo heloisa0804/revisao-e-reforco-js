@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando módulos JS em páginas HTML</title>
+</head>
+
+<body>
+    
+   <h1>Acessando módulos</h1> 
+   <hr>
+
+   <ul id="lista-alunos">
+   
+   </ul>
+
+   <script type="module">
+    import { alunos } from "./modulos-esm/dados.js";
+    console.log(alunos);
+
+    
+const lista = document.getElementById("lista-alunos"); 
+
+alunos.forEach(function(aluno) {
+ const li = document.createElement("li");
+ li.textContent = aluno; 
+ lista.appendChild(li); 
+});
+
+
+    </script>
+
+</body>
+
+</html>
+
+

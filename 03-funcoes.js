@@ -1,98 +1,101 @@
 'use strict';
 
-exemplo1();//chamada da função
-
-function separador(){
-    console.log("\n****************\n");
-}
-
-separador();
-
-//Sintaxe tradicional, função nomeada
-// A ordem de declaração da função neste caso NÃO IMPORTA
-function exemplo1(){
-    console.log("Função nomeada");
-
-}
-
 exemplo1(); //chamada da função
 
-//////////////////////
+//Sintaxe tradicional, função nomeada
+//A ordem de declaração da função NESTE NÃO IMPORTA
+function exemplo1() {
+  console.log("Função nomeada");
+}
+
+function separador() {
+  console.log("\n************************************************\n");
+}
 
 separador();
 
-// Chamada aqui dá erro, pois não pode ser feita antes da declaração
-// exemplo2();
 
-// Sintaxe tradicional, função anônima
-// Nesta sintaxe, a ordem IMPORTA.
-const exemplo2 = function(){
-     console.log("Função anônima");
+// exemplo2(); chamada aqui dá erro, pois não pode ser feita antes da declaração
+
+// Sintaxe tradicional , função anônima
+// Nesta sintaxe, a ordem IMPORTA
+
+const exemplo2 = function () {
+  console.log("Função anônima");
+
 };
 
-exemplo2(); // chamada (sempre após declarar a função anônima)
+// no caso da Anônima a chamada sempre é depois da declaração da função
 
+exemplo2(); //chamada (sempre após declarar a função anônima)
 
 separador();
 
-/* 1) Crie uma função (qualquer sintaxe) que receba dois valores numericos como parâmetros, calcule a diferença entre valores e retorne o resultado calculado */
+// 1) Crie uma função (qualquer sintaxe) que receba dois valores numéricos como parâmetros, calcule a diferença entre estes valores e retorne o resultado calculado
 
-/* 2) Chame esta função pelo menos duas vezes passando valores diferentes e guardando os resultados em variáveis de escopo global. */
+//function calculadiferenca(valor1 , valor2){
+// let diferença = valor1 + valor2} - isso é chamada local não em bloco
+// não use esse tipo de estrutura
 
-/* 3) Apresente os resultados no console. */
 
-
-function calculoDiferenca(a,b) {
-    let resultado = a - b;
-   return resultado ; 
+function menos(a, b) {
+  return a - b;
 }
 
-let resultado1 = calculoDiferenca(20,10);
-let resultado2 = calculoDiferenca (30,10);
+//2) Chame essa função pelo menos duas vezes passando valores diferentes e guardando os resultados em variáveis de escopo global
 
-console.log("Resultado 1:", resultado1); 
-console.log("Resultado 2:", resultado2); 
+let resultado1 = menos(40, 20);
+
+let resultado2 = menos(50, 20);
+
+
+// 3) Apresente os resultados no console.
+
+let mensagem3 = `Os Resultados foram: ${resultado1} e ${resultado2}`;
+console.log(mensagem3);
 
 separador();
 
-/* Sintaxe moderna, função flecha, seta (arrow function)
-Nesta sintaxe, a ordem de declaração IMPORTA. */
+// Sintaxe moderna, função flecha/seta (arrow function)
+// Nesta sintaxe, a ordem de declaração IMPORTA
+
 const exemplo3 = () => {
-    console.log(" Arrow Function");
+  console.log("Arrow Function");
+};
 
-}
-
-exemplo3(); // chamada deve ser feita após a declaração
+exemplo3(); //Chamada deve ser feita após a declaração
 
 // Quando a função tem SOMENTE UM parâmetro, podemos remover os parênteses. E quando ela faz SOMENTE UMA ÚNICA ação (ideal), podemos remover as chaves e deixar em uma linha.
-const saudacao = nome => console.log("Olá " +nome);
-;
+const saudacao = nome => console.log("Olá " + nome);
 
-saudacao("João Pedro");
-saudacao("Alana");
-saudacao("Gabriel");
+saudacao("Roberto");
+saudacao("Cibele");
+saudacao("Lucia");
 
 separador();
 
-// Com retorno EXPLÍCITO
+//Com retorno EXPLÍCITO
 const calcularMetadeSintaxeCompleta = (valor) => {
-    return valor / 2;
+  return valor / 2;
 }
 
-console.log(calcularMetadeSintaxeCompleta(10));
+console.log(calcularMetadeSintaxeCompleta(20));
+
 
 // Com retorno IMPLÍCITO
 const calcularMetade = valor => valor / 2;
+console.log(calcularMetade(20));
 
 
 separador();
 
-/* Exercício de Refatoração */
-// 1) Reescreva a função do exercício anterior usando a sintaxe de arrow function.
-// 2) Teste fazendo novas chamadas e novas saídas
+//Exercicio de refaturação
+
+//1)Reescreva a função do exercício anterior usando a sintaxe de arrow function
+const calcularSubtracao = (a, b) => a - b;
 
 
-const calculo1 = (a,b) => a + b;
-    
-console.log(calculo1(20,30));
 
+//2) Teste fazendo novas chamadas e novas saídas
+
+console.log(calcularSubtracao(20,10));
