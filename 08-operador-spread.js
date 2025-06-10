@@ -32,6 +32,7 @@ const compra = {
   codigoPedido: "123xyz",
   produtos: ["Morcego", "Pomba", "Microfone"],
   total: 2589.66,
+  nome: "Paulo Cantor", // sobreescrevendo uma propriedade que veio com spread
 };
 
 console.log(compra);
