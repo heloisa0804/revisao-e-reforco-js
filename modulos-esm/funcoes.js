@@ -9,6 +9,13 @@ export const formatarvalorMoeda = valor => valor.toLocaleString('pt-br', {
   currency: 'BRL'
 });
 
+
+// Usamos o rest operator para obter uma lista de parâmetros, não importando a quantidade
+export function classificar(...texto){
+    return texto.sort();
+}
+
+
 //Para exportar as funções
 
 //export { converterLetraMaiuscula, converterLetraMinusculo, formatarvalorMoeda }
