@@ -101,5 +101,12 @@ const musico = {
   banda: "Pink Floyd",
 };
 
+// Acessando propriedades atráves do objeto ( sem desestruturação)
 console.log(musico.nome);
 console.log(musico.idade);
+
+const { nome, instrumento, idade, banda } = musico;
+console.log(nome);
+console.log(instrumento);
+console.log(idade);
+console.log(banda);
