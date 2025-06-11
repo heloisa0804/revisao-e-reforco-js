@@ -21,9 +21,24 @@ const capitais = [
   "Belo Horizonte",
 ];
 
-// Desestruturando alguns valores
+// Desestruturando alguns valores (omitimos Curitiba e Belo Horizonte)
 const [paraiba, amazonas, , bahia] = capitais;
 
 console.log(paraiba);
 console.log(amazonas);
 console.log(bahia);
+
+separador();
+
+const linguagens = [
+  ["HTML", "CSS", "JS"],
+  ["PHP", "Node.js", "SQL", "Phynton", "ASP.net"],
+];
+
+//console.log(linguagem[0][2]); // JS
+//console.log(linguagem[1][3]); // Python
+
+const [frontEnd, backEnd] = linguagens;
+
+console.log(frontEnd[2]); // Js
+console.log(backEnd[3]); // Python
