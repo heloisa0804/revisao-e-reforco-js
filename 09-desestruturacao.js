@@ -49,3 +49,26 @@ separador();
 const [[html, css, js], [php, node, sql, python, asp]] = linguagens;
 console.log(js);
 console.log(python);
+
+separador();
+
+/* Mini-exercício */
+
+const diversos = [
+  "JavaScript - Reforço",
+  ["Teclado", "Monitor", "Mouse"],
+  2112,
+  (texto) => texto.toUpperCase(),
+];
+
+// Faça a desestruturação dos elementos deste array
+// Teste usando console.log para exibir cada elemento extraído
+
+const [titulo, [teclado, monitor, mouse], numero, converter] = diversos;
+
+console.log(titulo);
+console.log(teclado);
+console.log(monitor);
+console.log(mouse);
+console.log(numero);
+console.log(converter("Heloisa"));
