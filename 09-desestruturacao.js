@@ -125,3 +125,46 @@ const { nome: nomeDoAluno, cidade, estado } = aluno;
 console.log(nomeDoAluno);
 console.log(cidade);
 console.log(estado);
+
+separador();
+
+// Mini-exercício
+
+const paciente = {
+  nome: "Gabriel Viana",
+  idade: 19,
+  contatos: ["gabriel@gmail.com", "11-98765-4321"],
+  sintomas: "Sonolência permanente, coriza, tosse, bronquite...",
+  mensalidade: 568.74,
+  endereco: {
+    localidade: " Rua Francisco Coimbra",
+    numero: "403",
+    bairro: "penha",
+  },
+  atendimento: () => (paciente.idade >= 60 ? "proprietário" : "normal"),
+};
+
+// Desestruture todos os elementos deste objeto paciente, tornando-os novas constantes
+
+// Use o console.log para testar o acesso a cada constante desestruturada
+
+const {
+  nome: nomePaciente,
+  idade: idadePaciente,
+  contatos: [email, telefone],
+  sintomas,
+  mensalidade,
+  atendimento,
+  endereco: { localidade, numero: numeroDaRua, bairro: bairroPaciente },
+} = paciente;
+
+console.log(nomePaciente);
+console.log(idadePaciente);
+console.log(email);
+console.log(telefone);
+console.log(sintomas);
+console.log(mensalidade);
+console.log(localidade);
+console.log(numeroDaRua);
+console.log(bairroPaciente);
+console.log(atendimento());
