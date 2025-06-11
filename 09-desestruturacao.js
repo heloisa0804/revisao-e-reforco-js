@@ -72,3 +72,21 @@ console.log(monitor);
 console.log(mouse);
 console.log(numero);
 console.log(converter("Heloisa"));
+
+separador();
+
+const guleseimas = [
+  "brigadeiro",
+  "brownie",
+  "torta de limão",
+  "coxinha",
+  "pastel",
+  "pizza",
+  "esfiha",
+];
+
+// Desestruturação com operador rest
+const [brigadeiro, brownie, torta, ...salgados] = guleseimas;
+
+console.log(brigadeiro);
+console.log(salgados); // virou um array
