@@ -90,3 +90,16 @@ const [brigadeiro, brownie, torta, ...salgados] = guleseimas;
 
 console.log(brigadeiro);
 console.log(salgados); // virou um array
+
+separador();
+
+// Desestruturando objetos
+const musico = {
+  nome: "David Gilmour",
+  instrumento: "Guitarra",
+  idade: 77,
+  banda: "Pink Floyd",
+};
+
+console.log(musico.nome);
+console.log(musico.idade);
