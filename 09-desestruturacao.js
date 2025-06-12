@@ -168,3 +168,14 @@ console.log(localidade);
 console.log(numeroDaRua);
 console.log(bairroPaciente);
 console.log(atendimento());
+
+separador();
+
+// Desestruturação de parâmetros de função
+function processarPedido(dadosPedidos) {
+  console.log("Produto " + dadosPedidos[0]);
+  console.log("Preço " + dadosPedidos[1]);
+}
+
+const pedido = ["TV", 1500];
+processarPedido(pedido);
