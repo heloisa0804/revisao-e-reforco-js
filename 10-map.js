@@ -46,6 +46,15 @@ console.log("======================");
 
 separador();
 
-//Exemplo 2: gerar um novo array contendo somente o s títulos dos cursos
+//Exemplo 2: gerar um novo array contendo somente os títulos dos cursos
 const titulos = cursos.map((curso) => curso.titulo);
 console.log(titulos);
+
+/* Exercícios
+Use o map para gerar um novo array contendo SOMENTE os preços dos cursos calculados com  um desconto de 10%.
+*/
+
+const precosComDesconto = cursos.map(
+  (curso) => curso.preco - curso.preco * 0.1
+);
+console.log(precosComDesconto);
