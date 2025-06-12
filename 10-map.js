@@ -22,3 +22,17 @@ separador();
 4) Guarde o resultado do map em uma nova constante
 5) Mostre no console este novo Array
  */
+
+const texto = [
+  " O MACACO QUER BANANA",
+  " O CACHORRO GOSTA DE OSSO",
+  " O GATO QUER PESTICO",
+  " O RATO GOSTA DE QUEIJO",
+  "A BALEIA GOSTA DE NADAR ",
+];
+
+console.log(texto);
+
+const textoMinusculo = texto.map((frase) => frase.toLowerCase());
+
+console.log(textoMinusculo);
