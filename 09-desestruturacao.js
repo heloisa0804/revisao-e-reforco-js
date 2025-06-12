@@ -185,3 +185,20 @@ const pedidoB = ["Notebook", 2500];
 processarPedido(pedidoB);
 
 separador();
+
+const exibirDados = (filme) => {
+  console.log(`Filme: ${filme.titulo} - Ano: ${filme.ano} \n`);
+};
+
+const filme1 = {
+  titulo: "O Hobbit",
+  ano: 2012,
+};
+
+const filme2 = {
+  titulo: "O szenhor dos Anéis",
+  ano: 2001,
+};
+
+exibirDados(filme1);
+exibirDados(filme2);
