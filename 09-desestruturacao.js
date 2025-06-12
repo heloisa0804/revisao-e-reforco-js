@@ -172,10 +172,16 @@ console.log(atendimento());
 separador();
 
 // Desestruturação de parâmetros de função
-function processarPedido(dadosPedidos) {
-  console.log("Produto " + dadosPedidos[0]);
-  console.log("Preço " + dadosPedidos[1]);
+function processarPedido([produto, preco, marca = "não definido"]) {
+  console.log("Produto " + produto);
+  console.log("Preço " + preco);
+  console.log("Marca " + marca);
 }
 
-const pedido = ["TV", 1500];
-processarPedido(pedido);
+const pedidoA = ["TV", 1500, "Sony"];
+processarPedido(pedidoA);
+
+const pedidoB = ["Notebook", 2500];
+processarPedido(pedidoB);
+
+separador();
