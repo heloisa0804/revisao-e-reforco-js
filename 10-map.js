@@ -1,5 +1,6 @@
 "use scritc";
 import { separador } from "./modulos-esm/exemplos.js";
+import cursos from "./modulos-esm/cursos.js";
 
 /* map (mapear, mapeamento - transformar/gerar em outra coisa)
 Passa por elementos de um array e realiza operações em cada um deles através de uma função callback, gerando um novo array de elementos transformados. */
@@ -23,7 +24,7 @@ separador();
 5) Mostre no console este novo Array
  */
 
-const texto = [
+const textos = [
   " O MACACO QUER BANANA",
   " O CACHORRO GOSTA DE OSSO",
   " O GATO QUER PESTICO",
@@ -31,8 +32,20 @@ const texto = [
   "A BALEIA GOSTA DE NADAR ",
 ];
 
-console.log(texto);
+console.log(textos);
 
-const textoMinusculo = texto.map((frase) => frase.toLowerCase());
+const textoMinusculo = textos.map((frase) => frase.toLowerCase());
 
 console.log(textoMinusculo);
+
+separador();
+
+console.log("== Lista Completa de Cursos ==");
+console.log(cursos);
+console.log("======================");
+
+separador();
+
+//Exemplo 2: gerar um novo array contendo somente o s títulos dos cursos
+const titulos = cursos.map((curso) => curso.titulo);
+console.log(titulos);
