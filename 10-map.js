@@ -77,9 +77,18 @@ separador();
 Gere uma nova lista de cursos contendo apenas os titulos e as categorias
 */
 
+// Versão1
+//const novaLista = cursos.map((item) => ( return {
+// titulo: item.titulo,
+//categoria: item.categoria,
+//}));
+
+// Versão 2: com retorno implícito
 const novaLista = cursos.map((item) => ({
   titulo: item.titulo,
   categoria: item.categoria,
 }));
 
 console.log(novaLista);
+
+separador();
