@@ -71,3 +71,18 @@ const cursosMobileFront = cursos.filter(
 );
 console.log("exercicio");
 console.log(cursosMobileFront);
+
+separador();
+
+// Desafio 😫😫😫
+// Gerar um novo array com os curos da categoria Back-End e COM O PREÇO atualizado com 10% de desconto. Para esta atividade voce deverá combinar filter com map.
+
+const cursosBack = cursos
+  .filter((curso) => {
+    return curso.categoria === "Back-End";
+  })
+  .map((curso) => {
+    return { ...curso, preco: curso.categoria - curso.categoria * 0.1 };
+  });
+
+console.log(cursosBack);
