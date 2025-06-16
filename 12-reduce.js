@@ -41,5 +41,5 @@ console.log(mediaPrecos.toFixed(2));
 
 const somaFrontEnd = cursos
   .filter(({ categoria }) => categoria === "Front-End")
-  .reduce((total, { preco }) => total + preco, 0);
+  .reduce((acumulador, { preco }) => acumulador + preco, 0);
 console.log(somaFrontEnd);
