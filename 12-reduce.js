@@ -10,8 +10,33 @@ import { separador } from "./modulos-esm/exemplos.js";
 
 // Exemplo 1
 const valores = [10, 50, 200, 1000];
-const total = valores.reduce((acumulador, valor) => {
-  return acumulador + valor;
-}, 0);
+const total = valores.reduce((acumulador, valor) => acumulador + valor, 0);
 
 console.log(total);
+
+separador();
+
+// Exercício 1: realize a soma dos preços de todos os cursos
+//Mostre no log
+const somaPrecos = cursos.reduce((total, { preco }) => total + preco, 0);
+console.log(somaPrecos);
+
+// Exercício 2: calcule a média dos preços de todos os cursos
+//Mostre no log
+const { soma, quantidade } = cursos.reduce(
+  ({ soma, quantidade }, { preco }) => ({
+    soma: soma + preco,
+    quantidade: quantidade + 1,
+  }),
+  { soma: 0, quantidade: 0 }
+);
+const mediaPrecos = soma / quantidade;
+console.log(mediaPrecos);
+
+// Exercício 3: calcule o preço dos cursos de Fron-End
+//Mostre no log
+
+const somaFrontEnd = cursos
+  .filter(({ categoria }) => categoria === "Front-End")
+  .reduce((total, { preco }) => total + preco, 0);
+console.log(somaFrontEnd);
