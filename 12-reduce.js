@@ -18,7 +18,10 @@ separador();
 
 // Exercício 1: realize a soma dos preços de todos os cursos
 //Mostre no log
-const somaPrecos = cursos.reduce((total, { preco }) => total + preco, 0);
+const somaPrecos = cursos.reduce(
+  (acumulador, { preco }) => acumulador + preco,
+  0
+);
 console.log(somaPrecos);
 
 // Exercício 2: calcule a média dos preços de todos os cursos
@@ -31,7 +34,7 @@ const { soma, quantidade } = cursos.reduce(
   { soma: 0, quantidade: 0 }
 );
 const mediaPrecos = soma / quantidade;
-console.log(mediaPrecos);
+console.log(mediaPrecos.toFixed(2));
 
 // Exercício 3: calcule o preço dos cursos de Fron-End
 //Mostre no log
