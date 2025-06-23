@@ -43,3 +43,5 @@ const somaFrontEnd = cursos
   .filter(({ categoria }) => categoria === "Front-End")
   .reduce((acumulador, { preco }) => acumulador + preco, 0);
 console.log(somaFrontEnd);
+
+separador()
